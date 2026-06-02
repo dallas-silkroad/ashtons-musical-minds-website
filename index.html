@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashton's Musical Minds | Piano Lessons</title>
+    <title>Ashton's Musical Minds | Piano Lessons in West Jordan, UT</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         :root {
             --primary: #2c1a4d;
             --accent: #9c7a4d;
+            --light: #f8f1e9;
         }
         * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: 'Georgia', serif; line-height: 1.7; background: #f8f1e9; }
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #333;
+            background: var(--light);
+        }
 
         header {
-            background: rgba(28,20,40,0.95);
+            background: rgba(28,20,40,0.96);
             position: fixed;
             width: 100%;
             z-index: 1000;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
         }
         nav {
             max-width: 1200px;
@@ -29,37 +35,77 @@
             align-items: center;
         }
         .logo-img {
-            height: 70px;
+            height: 78px;
             width: auto;
         }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
 
+        /* HERO */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), #0f0a1f;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.65)), #0f0a1f;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
+            position: relative;
         }
-        .hero h1 { font-size: 4.5rem; margin-bottom: 1rem; }
-        
-        .piano-keys { display: flex; justify-content: center; gap: 4px; margin: 2rem 0; height: 260px; }
-        .key {
-            background: white;
+        .hero-content h1 {
+            font-size: 4.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero-content p {
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Realistic Piano */
+        .piano {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 3px;
+            margin: 2rem 0;
+            padding: 20px 30px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            max-width: 920px;
+            width: 100%;
+        }
+        .white-key {
+            background: linear-gradient(#fff, #f0f0f0);
             border: 2px solid #111;
-            border-radius: 6px 6px 0 0;
-            width: 28px;
+            border-top: none;
+            width: 42px;
             height: 180px;
-            transition: all 0.1s;
+            border-radius: 0 0 8px 8px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            transition: all 0.1s ease;
         }
-        .key.black {
-            background: #111;
+        .black-key {
+            background: linear-gradient(#222, #111);
+            width: 26px;
             height: 110px;
-            margin: 0 -14px;
+            margin: 0 -13px;
+            border-radius: 0 0 6px 6px;
             z-index: 2;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+            transition: all 0.1s ease;
         }
-        .key.active { background: #ffdd57; transform: scaleY(0.8); }
+        .key.active {
+            background: #ffdd57 !important;
+            transform: scaleY(0.92);
+        }
 
         .btn {
             background: var(--accent);
@@ -68,47 +114,85 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.2rem;
+            transition: 0.3s;
         }
+        .btn:hover {
+            background: #b38a5c;
+            transform: translateY(-4px);
+        }
+
+        section { padding: 6rem 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        h2 { font-size: 3rem; text-align: center; margin-bottom: 3rem; color: var(--primary); }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <img src="Musical Minds Logo.jpeg" alt="Ashton's Musical Minds" class="logo-img">
-            <div>
-                <a href="#about" style="color:white; margin:0 15px;">About</a>
-                <a href="#gallery" style="color:white; margin:0 15px;">Gallery</a>
-                <a href="#pricing" style="color:white; margin:0 15px;">Pricing</a>
-                <a href="#contact" style="color:white; margin:0 15px;">Contact</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
             </div>
         </nav>
     </header>
 
-    <section class="hero">
-        <div>
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
             <h1>Ashton's Musical Minds</h1>
-            <p style="font-size:1.6rem;">Piano Lessons • West Jordan, Utah</p>
-            <div class="piano-keys" id="piano"></div>
-            <a href="#contact" class="btn">Start Learning Today</a>
+            <p>Elegant Piano Lessons • West Jordan, Utah</p>
+            
+            <div class="piano" id="piano"></div>
+            
+            <a href="#contact" class="btn">Begin Your Musical Journey</a>
         </div>
     </section>
 
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <h2>Meet Ashton David</h2>
+            <!-- Add your full bio content here -->
+            <p style="max-width:800px; margin:0 auto; text-align:center; font-size:1.2rem;">
+                Music has always been the heartbeat of my home. I offer personalized piano lessons tailored to each student's goals and learning style.
+            </p>
+        </div>
+    </section>
+
+    <!-- GALLERY, PRICING, CONTACT sections can be added back as needed -->
+
     <script>
-        // Simple piano animation
+        // Realistic Piano with proper black/white key layout
         const piano = document.getElementById('piano');
-        for (let i = 0; i < 8; i++) {
-            const k = document.createElement('div');
-            k.className = 'key';
-            if ([1,3,5].includes(i)) k.classList.add('black');
-            piano.appendChild(k);
-        }
-        let i = 0;
+        const notes = [
+            {type: 'white'}, {type: 'black'}, {type: 'white'},
+            {type: 'black'}, {type: 'white'}, {type: 'white'},
+            {type: 'black'}, {type: 'white'}, {type: 'black'},
+            {type: 'white'}, {type: 'black'}, {type: 'white'}
+        ];
+
+        notes.forEach(note => {
+            const key = document.createElement('div');
+            key.className = note.type === 'white' ? 'white-key' : 'black-key';
+            piano.appendChild(key);
+        });
+
+        // Piano animation
+        let index = 0;
+        const sequence = [0, 2, 4, 5, 7, 9, 11, 12, 7, 9, 11];
         setInterval(() => {
             const keys = piano.children;
-            keys[i % 8].classList.add('active');
-            setTimeout(() => keys[i % 8].classList.remove('active'), 200);
-            i++;
-        }, 180);
+            const currentKey = keys[sequence[index % sequence.length]];
+            if (currentKey) {
+                currentKey.classList.add('active');
+                setTimeout(() => currentKey.classList.remove('active'), 180);
+            }
+            index++;
+        }, 160);
     </script>
 </body>
 </html>
