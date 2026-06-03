@@ -1,198 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashton's Musical Minds | Piano Lessons in West Jordan, UT</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2c1a4d;
-            --accent: #9c7a4d;
-            --light: #f8f1e9;
-        }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.7;
-            color: #333;
-            background: var(--light);
-        }
+You are an expert full-stack web designer and developer. Create a complete, beautiful, single-file index.html website for Ashton's Musical Minds, a piano teaching business in West Jordan, Utah.
+Business Owner:
 
-        header {
-            background: rgba(28,20,40,0.96);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            backdrop-filter: blur(12px);
-        }
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo-img {
-            height: 78px;
-            width: auto;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 2rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--accent); }
+Name: Ashton David
+Business: Ashton's Musical Minds
+Style: Elegant, warm, professional, artistic, and inviting
 
-        /* HERO */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.65)), #0f0a1f;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        .hero-content h1 {
-            font-size: 4.8rem;
-            margin-bottom: 0.5rem;
-        }
-        .hero-content p {
-            font-size: 1.7rem;
-            margin-bottom: 2rem;
-        }
+Required Assets (use correct relative file names):
 
-        /* Realistic Piano */
-        .piano {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 3px;
-            margin: 2rem 0;
-            padding: 20px 30px;
-            background: #1a1a1a;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-            max-width: 920px;
-            width: 100%;
-        }
-        .white-key {
-            background: linear-gradient(#fff, #f0f0f0);
-            border: 2px solid #111;
-            border-top: none;
-            width: 42px;
-            height: 180px;
-            border-radius: 0 0 8px 8px;
-            position: relative;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-            transition: all 0.1s ease;
-        }
-        .black-key {
-            background: linear-gradient(#222, #111);
-            width: 26px;
-            height: 110px;
-            margin: 0 -13px;
-            border-radius: 0 0 6px 6px;
-            z-index: 2;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.8);
-            transition: all 0.1s ease;
-        }
-        .key.active {
-            background: #ffdd57 !important;
-            transform: scaleY(0.92);
-        }
+Logo: Musical Minds Logo.jpeg (large version) and Musical Minds Logo Small.jpeg
+Photos: 20221022_105523.jpeg, Resized_IMG_4398.jpeg, 20220616_113811.jpeg
+Video: 20220510_173933.mp4
+Contract: Ashton's Musical Minds Contract.pdf
 
-        .btn {
-            background: var(--accent);
-            color: white;
-            padding: 16px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #b38a5c;
-            transform: translateY(-4px);
-        }
+Key Requirements:
 
-        section { padding: 6rem 0; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        h2 { font-size: 3rem; text-align: center; margin-bottom: 3rem; color: var(--primary); }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <img src="Musical Minds Logo.jpeg" alt="Ashton's Musical Minds" class="logo-img">
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
+Header/Navigation:
+Fixed navbar with the large logo on the left
+Navigation links: Home, About, Gallery, Pricing, Contact
+Elegant dark transparent background
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Ashton's Musical Minds</h1>
-            <p>Elegant Piano Lessons • West Jordan, Utah</p>
-            
-            <div class="piano" id="piano"></div>
-            
-            <a href="#contact" class="btn">Begin Your Musical Journey</a>
-        </div>
-    </section>
+Hero Section:
+Full-screen hero with dark overlay
+Large heading: "Ashton's Musical Minds"
+Subheading: "Personalized Piano Lessons in West Jordan, Utah"
+Realistic animated piano in the center (white and black keys that light up sequentially, simulating playing)
+Background music: Cristofori's Dream by David Lanz playing on loop (use a placeholder audio source or comment where to put the real file)
+Prominent "Begin Your Musical Journey" button
 
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="container">
-            <h2>Meet Ashton David</h2>
-            <!-- Add your full bio content here -->
-            <p style="max-width:800px; margin:0 auto; text-align:center; font-size:1.2rem;">
-                Music has always been the heartbeat of my home. I offer personalized piano lessons tailored to each student's goals and learning style.
-            </p>
-        </div>
-    </section>
+About Section:
+Include the full bio provided earlier (the one starting with "Music has always been the heartbeat of my home...")
+Photo of Ashton on the left or right
 
-    <!-- GALLERY, PRICING, CONTACT sections can be added back as needed -->
+Gallery Section:
+Grid showcasing the provided photos and video
 
-    <script>
-        // Realistic Piano with proper black/white key layout
-        const piano = document.getElementById('piano');
-        const notes = [
-            {type: 'white'}, {type: 'black'}, {type: 'white'},
-            {type: 'black'}, {type: 'white'}, {type: 'white'},
-            {type: 'black'}, {type: 'white'}, {type: 'black'},
-            {type: 'white'}, {type: 'black'}, {type: 'white'}
-        ];
+Pricing Section:
+$35 per 30-minute lesson
+In-home lessons available
+Travel fee: $0.72 per mile from 8773 Pebblecreek Rd, West Jordan, UT 84081
+Link to the contract PDF
 
-        notes.forEach(note => {
-            const key = document.createElement('div');
-            key.className = note.type === 'white' ? 'white-key' : 'black-key';
-            piano.appendChild(key);
-        });
+Contact Section:
+Clean inquiry form with fields:
+Student First & Last Name
+Email
+Phone
+Preferred lesson location (Student's home / Teacher's studio)
+Current piano experience
+Preferred music styles
+Additional notes
 
-        // Piano animation
-        let index = 0;
-        const sequence = [0, 2, 4, 5, 7, 9, 11, 12, 7, 9, 11];
-        setInterval(() => {
-            const keys = piano.children;
-            const currentKey = keys[sequence[index % sequence.length]];
-            if (currentKey) {
-                currentKey.classList.add('active');
-                setTimeout(() => currentKey.classList.remove('active'), 180);
-            }
-            index++;
-        }, 160);
-    </script>
-</body>
-</html>
+Form should show a success message on submit
+Display contact info (email, phone, Venmo: @ashtonmusicalminds)
+
+Overall Design:
+Elegant, sophisticated, warm color palette (deep purples, golds, creams, dark wood tones)
+Excellent mobile responsiveness
+Smooth scrolling
+Professional typography
+High visual appeal to attract new students
+
+
+Please output the complete, ready-to-use index.html code with all sections included and well-commented. Make it beautiful and emotionally engaging.
